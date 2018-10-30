@@ -1,0 +1,430 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px Arial, sans-serif;
+	width: 100%;
+	height: 100%;
+}
+.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	box-shadow:0px 0px 18px 2px rgba(138, 138, 138,1) ;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	height: 240px;
+}
+.header1 {
+	width:385px;
+	height: 240px;
+	background: url(img/prazdnik42-crop-u427.png) no-repeat right white;
+	float:left;
+	margin-left:-320px;
+}
+.header2 {
+	width:483px;
+	height: 240px;
+	margin-left:350px;
+	background: url(img/awesome_23a6d2ad2123-crop-u512.jpg) no-repeat right white;
+	float:left;
+}
+
+.header3 {
+	width:385px;
+	height: 240px;
+	margin-right:-300px;
+	background: url(img/prazdnik43-crop-u400.png) no-repeat right white;
+	float:left;
+}
+
+.header a {
+	text-decoration: none;
+}
+
+.tel,.mail,.title_header,.title_desc {
+	position: relative;
+	top:-240px;
+	left:80px;
+	color:#C1272D;
+	font: 30pt sans-serif;
+	font-family: 'Lobster', cursive;
+}
+.tel a,.mail a,.tel a:hover,.mail a:hover,.title_header a{
+	color:#C1272D;
+	text-decoration: none;
+	font: 20pt sans-serif;
+	font-family: 'Lobster', cursive;
+}
+
+.title_desc {
+	padding-left:100px;
+}
+
+.title_header a{
+	font: inherit;
+	font-size:35pt;
+}
+
+/* Menu top
+---------------------------------------------------------------*/
+nav{
+	display: block;
+	margin: 0 auto -15px ;
+	text-align: center;
+	width: 960px;
+	position:relative;
+	top:-22px;
+}
+
+/*----------------------------
+	CSS3 Animated Navigation
+-----------------------------*/
+
+
+.fancyNav{
+	/* Affects the UL element */
+	overflow: hidden;
+	display: inline-block;
+}
+
+.fancyNav li{
+	/* Specifying a fallback color and we define CSS3 gradients for the major browsers: */
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1fa7c9+1,0e63e3+100 */
+	background: rgb(31,167,201); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(31,167,201,1) 1%, rgba(14,99,227,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(31,167,201,1) 1%,rgba(14,99,227,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(31,167,201,1) 1%,rgba(14,99,227,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1fa7c9', endColorstr='#0e63e3',GradientType=0 ); /* IE6-9 */
+
+
+	border-right: 1px solid rgba(9, 9, 9, 0.125);
+
+	/* Adding a 1px inset highlight for a more polished efect: */
+
+	box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-moz-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+	-webkit-box-shadow: 1px -1px 0 rgba(255, 255, 255, 0.6) inset;
+
+	position:relative;
+
+	float: left;
+	list-style: none;
+}
+
+.fancyNav li:after{
+
+	/* This creates a pseudo element inslide each LI */
+
+	content:'.';
+	text-indent:-9999px;
+	overflow:hidden;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity:0;
+
+	/* Gradients! */
+
+	background-image:-webkit-gradient(linear, left top, right top, from(rgba(168,168,168,0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
+	background-image:-moz-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-o-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-ms-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+
+	/* Creating borders with box-shadow. Useful, as they don't affect the size of the element. */
+
+	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+
+	/* This will create a smooth transition for the opacity property */
+
+	-moz-transition:0.25s all;
+	-webkit-transition:0.25s all;
+	-o-transition:0.25s all;
+	transition:0.25s all;
+}
+
+/* Treating the first LI and li:after elements separately */
+
+.fancyNav li:first-child{
+	border-radius: 7px 0 0 7px;
+}
+
+.fancyNav li:first-child:after,.fancyNav li.selected:first-child:after{
+	box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-moz-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	-webkit-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+
+	border-radius:4px 0 0 4px;
+}
+
+.fancyNav li:last-child{
+	border-radius: 0 7px 7px 0;
+}
+
+/* Treating the last LI and li:after elements separately */
+
+.fancyNav li:last-child:after,
+.fancyNav li.selected:last-child:after{
+	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+
+	border-radius:0 4px 4px 0;
+}
+
+.fancyNav li:hover:after,
+.fancyNav li.selected:after,
+.fancyNav li:target:after{
+	/* This property triggers the CSS3 transition */
+	opacity:1;
+}
+
+.fancyNav:hover li.selected:after,
+.fancyNav:hover li:target:after{
+	/* Hides the targeted li when we are hovering on the UL */
+	opacity:0;
+}
+
+.fancyNav li.selected:hover:after,
+.fancyNav li:target:hover:after{
+	opacity:1 !important;
+}
+
+/* Styling the anchor elements */
+
+.fancyNav li a{
+	color: #FFF;
+	display: inline-block;
+	font: 20px/1 Arial,sans-serif;
+	padding: 12px 35px 14px;
+	position: relative;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.6);
+	z-index:2;
+	text-decoration:none !important;
+	text-transform:uppercase;
+	white-space:nowrap;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.middle {
+	width: 100%;
+	padding: 0 0 150px;
+	position: relative;
+}
+.middle:after {
+	display: table;
+	clear: both;
+	content: '';
+}
+.container {
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+.content {
+	padding: 0 0 0 270px;
+}
+
+h1{
+	width:100%;
+	color:#079;
+	font-size:30px;
+	padding: 30px 0;
+	text-align: center;
+}
+
+h2 {
+	width:100%;
+	color:#079;
+	font-size:24px;
+	padding: 30px 0;
+	text-align: center;
+}
+
+h3 {
+	width:100%;
+	color:#079;
+	font-size:20px;
+	padding: 30px 0;
+	text-align: center;
+}
+
+p,main.content ul{
+	text-indent: 10px;
+	font-size: 16px;
+	line-height: 25px;
+	padding-right: 40px;
+}
+
+main.content ul {    
+	list-style-type: disc;
+	list-style-position: inside;
+	text-indent: 0px;
+	padding-left: 10px;
+	padding-right: 30px;
+} 
+
+strong {
+	font-weight: bold;
+}
+
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0 auto;
+    padding: 9px 20px 0 19px;
+}
+
+.content blockquote {
+    background: url(img/quote.png) no-repeat;
+    font-family: serif;
+    font-size: 14px;
+    padding-left: 32px;
+    padding-bottom:10px;
+    margin: 0px 60px 0px 25px;	
+    color: #777;
+    background-color: rgba(215,247,211,.51);
+}
+
+.content blockquote p {
+	text-indent: 0px;
+	font-size: 14px;
+	line-height: 25px;
+	padding-right: 40px;
+}
+/* Left Sidebar
+-----------------------------------------------------------------------------*/
+.left-sidebar {
+	float: left;
+	width: 250px;
+	margin-left: -100%;
+	position: relative;
+	background: #FFF;
+	padding-left: 10px;
+}
+
+/*Menu sidebar
+-----------------------------------------------------------------------------*/
+
+ul.aside-menu{
+	margin:0;
+	padding:0;
+}
+
+ul.aside-menu li {
+	list-style: none;
+    list-style-image: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 2px;
+}
+ul.aside-menu li a{
+    color: #3e3e3e;
+    display: block;
+    height: 3em;
+    line-height:3em;
+    text-transform: uppercase;
+    border: 2px solid #16e;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+    text-decoration:none;
+}
+
+.menu-image-title {
+font-size: 100%;
+}
+
+.menu-item a img {
+padding-left:10px;
+}
+
+.ballon {
+	border: 2px solid #16e;
+	border-radius: 7px 7px 7px 7px;
+	padding:10px;
+}
+
+.wp-caption-text {
+	text-align: center;
+    font-style: italic;
+}
+
+p a {
+	text-decoration: none;
+    color: black;
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	width: 1000px;
+	margin: -150px auto 0;
+	height: 150px;
+	position: relative;
+	background: url('img/2-kids-22.png') no-repeat right #fff;
+}
